@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -70,7 +71,7 @@
         android:layout_marginBottom="15dp"
         android:ems="15"
         android:inputType="textPassword"
-        android:text="비밀번호"
+        android:hint="비밀번호"
         app:layout_constraintBottom_toTopOf="@+id/join_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
@@ -87,7 +88,7 @@
         android:layout_marginBottom="15dp"
         android:ems="15"
         android:inputType="textPassword"
-        android:text="비밀번호 확인"
+        android:hint="비밀번호 확인"
         app:layout_constraintBottom_toTopOf="@+id/join_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
