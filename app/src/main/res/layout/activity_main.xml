@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="com.example.loginpage.MainActivity">
+    tools:context="com.example.loginpage.MainActivity"
+    tools:layout_editor_absoluteX="15dp"
+    tools:layout_editor_absoluteY="0dp">
 
+
+    <CheckBox
+        android:id="@+id/agree"
+        android:layout_width="74dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="11dp"
+        android:text="동의"
+        app:layout_constraintBottom_toTopOf="@+id/textVw"
+        app:layout_constraintEnd_toStartOf="@+id/dis_agree"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/dis_agree"
+        android:layout_width="83dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:text="비동의"
+        app:layout_constraintBottom_toTopOf="@+id/textVw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tView"
+        app:layout_constraintVertical_bias="0.09" />
 
     <EditText
         android:id="@+id/textVw"
@@ -18,8 +46,8 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="15dp"
         android:ems="15"
+        android:hint="닉네임"
         android:inputType="textPersonName"
-        android:text="닉네임"
         app:layout_constraintBottom_toTopOf="@+id/join_id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
@@ -36,8 +64,8 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="15dp"
         android:ems="15"
+        android:hint="아이디"
         android:inputType="textEmailAddress"
-        android:text="아이디"
         app:layout_constraintBottom_toTopOf="@+id/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
@@ -70,8 +98,8 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="15dp"
         android:ems="15"
-        android:inputType="textPassword"
         android:hint="비밀번호"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/join_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
@@ -87,8 +115,8 @@
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="15dp"
         android:ems="15"
-        android:inputType="textPassword"
         android:hint="비밀번호 확인"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/join_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
@@ -103,7 +131,7 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="70dp"
         android:ems="15"
-        android:text="이메일"
+        android:hint="이메일"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
