@@ -14,47 +14,42 @@
         android:id="@+id/dis_agree"
         android:layout_width="83dp"
         android:layout_height="26dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="28dp"
         android:text="비동의"
         app:layout_constraintBottom_toBottomOf="@+id/agree"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/agree"
-        app:layout_constraintTop_toBottomOf="@+id/tView" />
+        app:layout_constraintTop_toTopOf="@+id/agree"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/agree"
         android:layout_width="74dp"
         android:layout_height="25dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="20dp"
         android:text="동의"
-
-        app:layout_constraintBottom_toTopOf="@+id/text_nic"
-        app:layout_constraintEnd_toStartOf="@+id/dis_agree"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintBottom_toBottomOf="@+id/agree_view"
+        app:layout_constraintStart_toEndOf="@+id/agree_view"
+        app:layout_constraintTop_toTopOf="@+id/agree_view"
+        app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_nic"
         android:layout_width="277dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="3dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="40dp"
         app:counterEnabled="true"
         app:counterMaxLength="10"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:helperText="필수입력"
-        app:layout_constraintBottom_toTopOf="@+id/join_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dis_agree">
+        app:layout_constraintTop_toBottomOf="@+id/agree_view">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="256dp"
-            android:layout_height="47dp"
+            android:layout_width="258dp"
+            android:layout_height="52dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="70dp"
@@ -64,23 +59,24 @@
             app:hintAnimationEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/join_id"
         android:layout_width="277dp"
         android:layout_height="97dp"
-        android:layout_marginStart="3dp"
+        android:layout_marginTop="5dp"
         app:counterEnabled="true"
         app:counterMaxLength="15"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
-        app:layout_constraintBottom_toTopOf="@+id/join_password"
+        app:helperText="필수입력"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_nic">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="257dp"
-            android:layout_height="42dp"
+            android:layout_width="258dp"
+            android:layout_height="52dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="70dp"
@@ -94,16 +90,13 @@
         android:id="@+id/nic_confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="496dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/button_round"
         android:text="확인"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toEndOf="@+id/text_nic"
         app:layout_constraintTop_toBottomOf="@+id/dis_agree" />
 
@@ -111,38 +104,33 @@
         android:id="@+id/confirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="395dp"
+        android:layout_marginBottom="588dp"
         android:background="@drawable/button_round"
         android:text="확인"
         android:textColor="@color/white"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/join_id"
+        app:layout_constraintEnd_toEndOf="@+id/nic_confirm"
+        app:layout_constraintStart_toStartOf="@+id/nic_confirm"
         app:layout_constraintTop_toBottomOf="@+id/nic_confirm"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.968" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/join_password"
-        android:layout_width="276dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="280dp"
+        android:layout_width="277dp"
+        android:layout_height="99dp"
         app:endIconMode="password_toggle"
         app:errorEnabled="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/join_password_chk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_id">
+        app:layout_constraintTop_toBottomOf="@+id/join_id"
+        app:layout_constraintVertical_bias="1.0">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="255dp"
-            android:layout_height="48dp"
+            android:layout_width="258dp"
+            android:layout_height="56dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="70dp"
@@ -154,22 +142,19 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/join_password_chk"
-        android:layout_width="281dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="208dp"
+        android:layout_width="276dp"
+        android:layout_height="97dp"
+        android:layout_marginBottom="4dp"
         app:endIconMode="password_toggle"
         app:errorEnabled="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/join_email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_password"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="259dp"
-            android:layout_height="54dp"
+            android:layout_width="258dp"
+            android:layout_height="56dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="70dp"
@@ -180,39 +165,34 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <Button
         android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="734dp"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/button_round"
         android:text="취소"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/joi_button"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/join_email" />
 
     <Button
         android:id="@+id/joi_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="734dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/button_round"
         android:text="다음"
         android:textColor="@color/white"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/delete"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/join_email" />
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
@@ -221,40 +201,37 @@
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/delete" />
+        app:layout_constraintTop_toBottomOf="@+id/joi_button"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/tView"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="44dp"
-
+    <Button
+        android:id="@+id/agree_view"
+        android:layout_width="96dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/button_round"
         android:ems="24"
-        android:text="이용약관"
-        app:layout_constraintBottom_toTopOf="@+id/text_nic"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:text="이용약관보기"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/join_email"
-        android:layout_width="282dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="1dp"
+        android:layout_width="275dp"
+        android:layout_height="92dp"
         android:layout_marginEnd="34dp"
+        android:layout_marginBottom="228dp"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/join_password_chk"
-        app:layout_constraintVertical_bias="0.112">
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="258dp"
